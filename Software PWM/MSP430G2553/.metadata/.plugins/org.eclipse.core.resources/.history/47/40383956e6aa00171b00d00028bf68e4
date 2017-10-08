@@ -1,0 +1,83 @@
+#include <msp430.h> 
+
+// Constants
+#define PWM_period 999
+#define PWM_duty_max 999 // 100%
+#define PWM_duty_min 100 // 10%
+#define PWM_increment 100 // 10%
+#define BUTTON BIT3
+int main( void )
+{
+  //---------------- //
+  // Hardware config //
+  //---------------- //
+
+  WDTCTL = WDTPW | WDTHOLD; // Stop watchdog timer
+
+  // DCO configuration
+  DCOCTL = CALDCO_1MHZ; //Set DCO to 1 MHz
+  BCSCTL1 = CALBC1_1MHZ; // Calibrate internal clock for 1 MHz
+
+  // Port 1 configuration
+  P1DIR |= 0x41;                  // configure P1.0 and 1.6 as output
+  P1OUT &= ~0x41;                 //Set the initial LED condition to off.
+  P1DIR &= ~BUTTON;               //Set P1.3 (Button) as an input
+  P1REN |= BUTTON;                //Enable the pull resistor on P1.3
+  P1OUT |= BUTTON;                //Tell the pull resistor to pull up
+  P1IE |= BUTTON;                 //Enable interrupt on P1.3
+  P1IES |= BUTTON;                //Set the P1.3 interrupt to trigger on a high->low edge.
+  P1IFG &= ~BUTTON;               //Clear the interrupt flag register on P1.3
+
+  // Timer A configuration
+  CCTL1 = CCIE; // Enable interrupts
+  CCTL1 |= OUTMOD_7; // CCR1 reset/set
+  TACTL =  TASSEL_2 + // Set clock to internal DCO
+           ID_3 +     // Divided by 8
+           TAIE +     // Interrupts
+           MC_0;      // Stopped to begin with
+  CCR0 = PWM_period;  // PWM Period
+  CCR1 = 500; // PWM duty cycle
+
+  //----------- //
+  // Main logic //
+  //----------- //
+  TACTL  |= MC_1; // Start timer
+  _BIS_SR(GIE + LPM1_bits); // Enter LMP1 plus interrupts
+}
+
+#pragma vector = TIMERA1_VECTOR
+__interrupt void Timer_A1 (void)
+{
+  switch (__even_in_range(TAIV,10))
+  {
+  case 2: // CCR1
+    {
+      //
+    } break;
+  case 4: // CCR2
+    {
+      //
+    } break;
+  case 10:  // CCR0
+    {
+      unsigned random = rand ();
+      // 0 increases PWM duty, 1 decreases (capped at min/max values)
+      if (random == 0)
+      {
+        CCR1 += PWM_increment;
+        if (CCR1 > PWM_duty_max)
+        {
+          CCR1 = PWM_duty_max;
+        }
+      }
+      else
+      {
+        CCR1 -= PWM_increment;
+        if (CCR1 < PWM_duty_min)
+        {
+          CCR1 = PWM_duty_min;
+        }
+      }
+    } break;
+  }
+}

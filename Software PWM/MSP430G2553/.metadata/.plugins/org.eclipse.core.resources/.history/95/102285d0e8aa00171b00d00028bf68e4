@@ -1,0 +1,72 @@
+#include <msp430.h> 
+#include <stdio.h>
+#include <inttypes.h>
+
+int DC = 0;                //Duty cycle set to 100
+int Period = 1000-1; //Period set to 1000
+int main()
+{
+       WDTCTL = WDTPW + WDTHOLD;
+
+       P1DIR |= BIT0;             //set P1.4 as output
+       P1SEL |= BIT0;             //set P1.4 as digital IO
+       TA0CCR0 = Period;    //Timer A0 introduced
+
+       P1REN |= BIT3;             //P1.1 Resistor enabled
+       P1OUT |= BIT3;             //P1.1 pull-up resistor
+    //   P2REN |= BIT1;             //P2.1 Resistor enabled
+     //  P2OUT |= BIT1;             //P2.1 pull-up resistor
+
+    P1IE |= BIT3;          //enable P1.1 interrupt
+    P1IES |= BIT3;         //select high to low edge
+    P1IFG &= ~BIT3;        //clear P1.1 flag
+    //P2IE |= 0x02;          //enable P2.1 interrupt
+    //P2IES |= 0x02;         //select high to low edge
+    P1IFG &= ~BIT3;        //clear P2.1 flag
+    __enable_interrupt();
+       __bis_SR_register(LPM0_bits);            //set interrupts and go to LPM0
+       __no_operation();
+       while(1)
+       {}
+}
+//Port1 interrupt
+#pragma vector=PORT1_VECTOR
+__interrupt void Port_1(void)
+{
+       if((P1IN & BIT3) != BIT1)
+       {
+              if(DC<999)
+              {
+                     int i;
+                     DC = DC + 100;
+                     for(i=0; i<30000; i++);
+                     printf("%d\n", DC);
+                     __low_power_mode_3();
+              }
+       }
+       TA0CCTL3 = OUTMOD_7;
+       TA0CCR3 = DC;
+       TA0CTL = MC_1 + TASSEL_2 + TACLR;
+       P1IE |= BIT3;
+       P1IFG &= ~BIT3;
+}
+//#pragma vector=PORT2_VECTOR
+//__interrupt void Port_2(void)
+//{
+  //     if((P2IN & BIT1) != BIT1)
+    //   {
+      //        if(DC>1)
+        //      {
+          //           int j;
+            //         DC = DC - 100;
+              //       for(j=0; j<30000; j++);
+                //     printf("%d\n", DC);
+                  //   __low_power_mode_3();
+              //}
+       //}
+       //TA0CCTL3 = OUTMOD_7;
+       //TA0CCR3 = DC;
+       //TA0CTL = MC_1 + TASSEL_2 + TACLR;
+      // P2IE |= BIT1;
+       //P2IFG &= ~BIT1;
+//}

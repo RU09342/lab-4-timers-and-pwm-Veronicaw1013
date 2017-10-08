@@ -1,0 +1,53 @@
+#include <msp430.h> 
+int i=1;
+void main(void) {
+WDTCTL = WDTPW | WDTHOLD; // Stop watchdog timer
+BCSCTL1 = CALBC1_1MHZ;
+DCOCTL = CALDCO_1MHZ;
+//P1OUT = BIT0;
+P1DIR |= BIT6;
+P1SEL |= BIT6;
+TA1CTL |= TASSEL_2|ID_3|MC_1|TAIE;
+TA0CCR0 = 125;
+TA0CCR1 = 0;
+TA0CCTL1 = OUTMOD_7;
+TA0CTL |= TASSEL_2|ID_3|MC_1|TAIE;
+__enable_interrupt();
+_BIS_SR(LPM0_bits|GIE);
+}
+#pragma vector=TIMER0_A0_VECTOR
+__interrupt void TimerA0(void){
+P1OUT ^= BIT0;
+}
+#pragma vector=TIMER0_A1_VECTOR
+__interrupt void TimerA(void)
+{
+switch(i){
+case 1:
+TA0CCR1+=1;
+__delay_cycles(40000);
+//TA1CCR0=5000;
+if(TA0CCR1==125)
+{
+i=2;
+}
+break;
+case 2:
+TA0CCR1-=1;
+__delay_cycles(40000);
+//TA1CCR0=5000;
+if(TA0CCR1==0)
+{
+i=1;
+TA0CCR1 =0 ;
+}
+break;
+}
+P1OUT ^=BIT6;
+//__delay_cycles(10000);
+TA0CTL &= ~TAIFG;
+}
+#pragma vector=TIMER1_A0_VECTOR
+__interrupt void TimerA1(void)
+{
+}
