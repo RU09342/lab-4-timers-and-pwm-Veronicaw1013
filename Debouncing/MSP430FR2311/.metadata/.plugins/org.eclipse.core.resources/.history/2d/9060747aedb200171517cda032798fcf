@@ -1,0 +1,121 @@
+#include <msp430.h>
+
+
+
+//TIMER
+
+void main(void)
+
+{
+
+    WDTCTL = WDTPW + WDTHOLD; // Stop watchdog timer
+
+    P1DIR |= (BIT0 + BIT6);
+
+    P1OUT &= 0x00; // Set the LEDs off
+
+                   // CCR0 interrupt enabled
+
+    TB0CTL = TBSSEL_2 + MC_0 + ID_3;           // SMCLK/8, upmode
+
+
+
+    TB0CCR0 =  0x00FF;  //Number timer counts to
+
+    TB0CCTL0 &= ~CCIE;
+
+    P1DIR |= (BIT0);
+
+    P1DIR |= (BIT0);
+
+    P1OUT |= (BIT0);
+
+    P1IE |= (BIT1);       //Enables interrupts for P1 Bit 1
+
+    P1IES |= BIT1;
+
+    P1REN |= (BIT1);    //Enables the resistor for P1 Bit 1
+
+    P1OUT |= (0x03);
+
+    P1OUT |= (BIT1);//Sets the resistor for P1 Bit 1 to Pull Up
+
+    P1IFG &= ~BIT1;   //The interrupt flag is cleared
+
+
+
+
+
+    //enable all interrupts
+
+    __bis_SR_register(GIE); // LPM0 with interrupts enabled
+
+
+
+}
+
+
+
+
+
+// Timer A0 interrupt service routine
+
+#pragma vector=TIMER0_B0_VECTOR
+
+__interrupt void TIMER0_B0_ISR (void)
+
+{
+
+        P1IE |= BIT1;
+
+        P1IES |= BIT1;
+
+        TB0CTL |= MC_0;
+
+        TB0CTL &= ~TBIFG;
+
+}
+
+
+
+
+
+//Port 1 interrupt service routine
+
+#pragma vector=PORT1_VECTOR
+
+__interrupt void Port_1(void)
+
+{
+
+    P1OUT ^= BIT0;
+
+    P1IE &= ~BIT1;
+
+    P1IFG &= ~BIT1;
+
+    if((P1IES & BIT1) == BIT1){
+
+        TB0CCTL0 = CCIE;
+
+        P1IES &= ~BIT1;
+
+        TB0CTL |= MC_1;
+
+        TB0R = 0;
+
+        P1IE &= ~BIT1;
+
+        P1IFG &= ~BIT1;
+
+    }else{
+
+        TB0CCTL0 = ~CCIE;
+
+    }
+
+
+
+
+
+}

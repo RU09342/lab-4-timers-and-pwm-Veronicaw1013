@@ -29,3 +29,852 @@ remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerato
 ' '
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 33: error #131: expected a "{"
+"../main.c", line 36: error #171: expected a declaration
+"../main.c", line 52: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 53: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 53: error #148: declaration is incompatible with "volatile unsigned char P5IFG" (declared at line 3868 of "D:\Embedded\ccsv7\ccs_base\msp430\include\msp430fr5994.h")
+"../main.c", line 53: error #66: expected a ";"
+"../main.c", line 54: error #171: expected a declaration
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+5 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 33: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 25: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 25: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 32: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 33: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+gmake[1]: 'Hardware PWM.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 33: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 33: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 33: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 40: warning #225-D: function "delay_cycles" declared implicitly
+"../main.c", line 40: remark #1538-D: (ULP 10.1) ISR Port_5 calls function delay_cycles. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+!CommandLauncher.error.commandCanceled!
+Error: Program "D:/Embedded/ccsv7/utils/bin/gmake" is not found in PATH
+
+PATH=[D:\Embedded\ccsv7\ccs_base\common\bin;D:\Embedded\ccsv7\ccs_base\common\uscif;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Lingo\;D:\bin;D:\Matlab\bin;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\MATLAB\R2016b\bin;E:\Matlab\bin;C:\Program Files (x86)\Windows Live\Shared;D:\Embedded\Git\cmd;C:\Program Files\PuTTY\;C:\Users\veron\AppData\Local\Microsoft\WindowsApps;;D:\Embedded\ccsv7\ccs_base\DebugServer\drivers]
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 40: warning #225-D: function "delay_cycles" declared implicitly
+"../main.c", line 47: warning #225-D: function "delay_cycles" declared implicitly
+"../main.c", line 40: remark #1538-D: (ULP 10.1) ISR Port_5 calls function delay_cycles. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 47: remark #1538-D: (ULP 10.1) ISR Port_5 calls function delay_cycles. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+ undefined    first referenced
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+
+>> Compilation failure
+makefile:143: recipe for target 'Hardware PWM.out' failed
+  symbol          in file     
+ ---------    ----------------
+ delay_cycles ./main.obj      
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Hardware PWM.out" not built
+gmake[1]: *** [Hardware PWM.out] Error 1
+gmake: *** [all] Error 2
+makefile:139: recipe for target 'all' failed
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 40: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 47: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 40: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 47: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+gmake[1]: 'Hardware PWM.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 40: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 47: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 49: remark #1528-D: (ULP 3.1) Detected flag polling using P5IFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 40: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 47: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 49: remark #1539-D: (ULP 11.1) Loop program control flow "P5IFG" compared against higher bits. Recommend compare against lower 4 bits to allow use of constant generators
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 40: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 47: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 29: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 36: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 28: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 28: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 27: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Hardware PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 27: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Hardware PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"Hardware PWM.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"D:/Embedded/ccsv7/ccs_base/msp430/lib/FR59xx" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --priority --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Hardware PWM_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Hardware PWM.out" "./main.obj" "../lnk_msp430fr5994.cmd"  -llibmpu_init.a -llibmath.a -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerator (LEA) but application does not appear to use LEA. Recommend offloading vector math and signal processing to LEA for improved performance.
+'Finished building target: Hardware PWM.out'
+' '
+
+**** Build Finished ****

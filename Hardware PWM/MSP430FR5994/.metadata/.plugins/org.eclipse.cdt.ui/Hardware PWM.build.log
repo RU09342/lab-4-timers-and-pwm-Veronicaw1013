@@ -5,9 +5,7 @@
 'Building file: ../main.c'
 'Invoking: MSP430 Compiler'
 "D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Hardware PWM/MSP430FR5994/Hardware PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
-"../main.c", line 26: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
-"../main.c", line 34: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
-"../main.c", line 3: remark #1535-D: (ULP 8.1) variable "enabled" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../main.c", line 27: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
 'Finished building: ../main.c'
 ' '
 'Building target: Hardware PWM.out'

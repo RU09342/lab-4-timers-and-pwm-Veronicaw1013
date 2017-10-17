@@ -1,0 +1,41 @@
+#include <msp430.h>
+int main(void){
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+
+    /* GPIO INIT*/
+    P1SEL |= BIT0;         // sets port mux for timer output
+    P4SEL &= ~BIT7;             // sets port mux
+    P5SEL &= ~BIT6;             // sets port mux
+    P1DIR |= BIT0;
+    P4DIR |= BIT7;    // Sets pin 1.0 and pin 1.1 as an output
+    P4OUT &= ~BIT7;    // Sets pull up to VCC
+    P2DIR &= ~BIT1;   // sets pin 5.6 as an input
+    P2REN |= BIT1;    // Enables pull up resistor on P5.6
+    P2OUT |= BIT1;    // Sets pull up to VCC
+    /* INTERRUPT INIT */
+    P2IE |= BIT1;
+    P2IES |= BIT1;
+    P2IFG &= ~BIT1;
+    TA0CTL= (MC_1  + TASSEL_2);            //up timer, Aclk
+    TA0CCTL1 = (OUTMOD_7);
+    TA0CCR0= 500;                           // sets maximum timer value
+    TA0CCR1= 250;
+    _BIS_SR(CPUOFF + GIE);                  // Enter LPM0 w/ interrupt
+}
+#pragma vector=PORT2_VECTOR
+__interrupt void Port_2(void){
+    P2IE &= ~BIT1;
+    _delay_cycles(50000);
+    P2IE |= BIT1;               //re-enable interrupt
+    P2IES ^= BIT1;
+    if (~P2IES & BIT1){           //if interrupt entered on posedge
+        P4OUT ^= BIT7;              // flip led
+        TA0CCR1 += 50;              // increase duty by 10%
+        if(TA0CCR1 == 550)
+            TA0CCR1 = 0;            // stay on if at 100%
+    }
+    else if (P2IES & BIT1){      // executes on the negedge
+        P4OUT ^= BIT7;
+    }
+    P2IFG &= ~BIT1;
+}
