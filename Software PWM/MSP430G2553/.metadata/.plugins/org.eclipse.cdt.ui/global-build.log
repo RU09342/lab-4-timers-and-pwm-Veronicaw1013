@@ -552,3 +552,102 @@ remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recomm
 ' '
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Software PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Software PWM/MSP430G2553/Software PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 6: error #20: identifier "PM5CTL0" is undefined
+"../main.c", line 6: error #20: identifier "LOCKLPM5" is undefined
+"../main.c", line 7: error #20: identifier "P1SEL0" is undefined
+"../main.c", line 20: error #20: identifier "TB0CTL" is undefined
+"../main.c", line 20: error #20: identifier "TBSSEL_2" is undefined
+"../main.c", line 21: error #20: identifier "TB0CCTL1" is undefined
+"../main.c", line 22: error #20: identifier "TB0CCTL0" is undefined
+"../main.c", line 23: error #20: identifier "TB0CCR0" is undefined
+"../main.c", line 24: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 28: warning #2580-D: pragma vector= accepts numeric arguments or "unused_interrupts" but not TIMER0_B1_VECTOR
+"../main.c", line 30: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 35: error #20: identifier "TB0CCTL1" is undefined
+"../main.c", line 37: warning #2580-D: pragma vector= accepts numeric arguments or "unused_interrupts" but not TIMER0_B0_VECTOR
+"../main.c", line 39: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 42: error #20: identifier "TB0CCTL0" is undefined
+"../main.c", line 52: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 47: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+14 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Software PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Software PWM/MSP430G2553/Software PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 6: error #20: identifier "P1SEL0" is undefined
+"../main.c", line 19: error #20: identifier "TB0CTL" is undefined
+"../main.c", line 19: error #20: identifier "TBSSEL_2" is undefined
+"../main.c", line 20: error #20: identifier "TB0CCTL1" is undefined
+"../main.c", line 21: error #20: identifier "TB0CCTL0" is undefined
+"../main.c", line 22: error #20: identifier "TB0CCR0" is undefined
+"../main.c", line 23: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 27: warning #2580-D: pragma vector= accepts numeric arguments or "unused_interrupts" but not TIMER0_B1_VECTOR
+"../main.c", line 29: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 34: error #20: identifier "TB0CCTL1" is undefined
+"../main.c", line 36: warning #2580-D: pragma vector= accepts numeric arguments or "unused_interrupts" but not TIMER0_B0_VECTOR
+"../main.c", line 38: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 41: error #20: identifier "TB0CCTL0" is undefined
+"../main.c", line 51: error #20: identifier "TB0CCR1" is undefined
+"../main.c", line 46: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+12 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Software PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Software PWM/MSP430G2553/Software PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 6: error #20: identifier "P1SEL0" is undefined
+"../main.c", line 46: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Software PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../main.c'
+'Invoking: MSP430 Compiler'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="D:/Embedded/ccsv7/ccs_base/msp430/include" --include_path="D:/Embedded/Labs/lab-4-timers-and-pwm-Veronicaw1013/Software PWM/MSP430G2553/Software PWM" --include_path="D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 46: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../main.c'
+' '
+'Building target: Software PWM.out'
+'Invoking: MSP430 Linker'
+"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"Software PWM.map" --heap_size=80 --stack_size=80 -i"D:/Embedded/ccsv7/ccs_base/msp430/include" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/lib" -i"D:/Embedded/ccsv7/tools/compiler/ti-cgt-msp430_16.9.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Software PWM_linkInfo.xml" --use_hw_mpy=none --rom_model -o "Software PWM.out" "./main.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+'Finished building target: Software PWM.out'
+' '
+
+**** Build Finished ****
