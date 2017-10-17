@@ -3773,3 +3773,10 @@ remark #10436-D: (ULP 6.3) Detected use of a device with a Low Energy Accelerato
 ' '
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Software PWM ****
+
+"D:\\Embedded\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+gmake[1]: 'Software PWM.out' is up to date.
+
+**** Build Finished ****

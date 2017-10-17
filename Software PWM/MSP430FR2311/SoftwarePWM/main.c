@@ -17,8 +17,8 @@ int main(void){
     P1IE |= BIT1;   // interrupt enable on pin 1.1
     P1IES |= BIT1;  //set interrupt to falling edge
     P1IFG &= ~BIT1; // clear interrupt flag
-    TB0CTL= MC_1  + TBSSEL_2; //up timer, SMCLK
-    TB0CCTL1 = (CCIE);  // capture/control interrupt enable
+    TB0CTL= MC_1  + TBSSEL_2 + ID_1; //up timer, SMCLK, div 2
+    TB0CCTL1 = (CCIE);  // capture/compare interrupt enable
     TB0CCTL0 = (CCIE);
     TB0CCR0= 500-1;        // max value timer will count up to
     TB0CCR1= 250;          // 50% duty cycle at start
@@ -54,7 +54,7 @@ __interrupt void Port_1(void){
             TB0CCR1 = 0;            // stay on if at 100%
     }
     else if (P1IES & BIT1){      // executes on the negedge
-        P2OUT ^= BIT0;
+        P2OUT &= ~BIT0;
     }
     P1IFG &= ~BIT1; //clear interrupt flag
 }
