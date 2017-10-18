@@ -1,0 +1,45 @@
+#include <msp430.h>
+
+int main(void) {
+
+    /*** Watchdog timer and clock Set-Up ***/
+    WDTCTL = WDTPW + WDTHOLD;   // Stop watchdog timer
+
+    /*** GPIO Set-Up ***/
+    P1DIR |= BIT0;
+    P9DIR |= BIT6;          // Set P1.0 & P1.6 as output
+    P1OUT &= ~(BIT0);       // Set P1.0 & P1.6 Low therefore LED's off
+    P9DIR &= ~BIT7;
+    P1DIR &= ~(BIT1 + BIT2);        // Set P1.3 & P1.7 as inputs
+    P1REN |= BIT1 + BIT2;           // Enable pull-ups on P1.3 & P1.7
+    P1IE |= BIT1 + BIT2;            // P1.3 & P1.7 interrupt enabled
+    P1IFG &= ~(BIT1 + BIT2);        // P1.3 & P1.7 IFG cleared
+    P1IES &= ~(BIT1 + BIT2);        // P1.3 & P1.7 interrupt edge High to Low edge
+
+    _BIS_SR(GIE);               // Enter interrupt enabled
+}
+
+// Port 1 interrupt service routine
+#pragma vector=PORT1_VECTOR
+__interrupt void Port_1(void){
+
+    switch (P1IFG)
+    {
+        case BIT1:
+            P1IES ^= BIT1;          // Toggle interrupt edge
+            P1OUT ^= BIT0;          // Toggle Red LED
+            __delay_cycles(40000);
+            P1IFG &= ~BIT3;         // clear the interrupt flag
+            break;
+        case BIT2:
+            P1IES ^= BIT2;          // Toggle interrupt edge
+            P9OUT ^= BIT7;          // Toggle Green LED
+            __delay_cycles(40000);
+            P1IFG &= ~BIT2;         // clear the interrupt flag
+            break;
+        default:
+            __delay_cycles(10000);
+            P1IFG = 0x00;
+            break;
+    }
+}

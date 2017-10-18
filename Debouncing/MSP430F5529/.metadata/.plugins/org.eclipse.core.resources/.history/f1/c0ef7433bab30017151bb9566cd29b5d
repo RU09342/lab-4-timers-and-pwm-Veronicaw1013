@@ -1,0 +1,39 @@
+#include <msp430.h>
+
+
+
+//TIMER
+
+int main(void)
+
+{
+
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+    P1DIR  |= BIT0;             // Set pin 1.0 as output
+    P1REN  |= BIT1;                   // resistor enable pin 1.1
+    P1OUT  = BIT1;                    // pullup resistor
+    P1IE |= BIT1;                     //pin 1.1 interrupt enable
+    P1IES = 0;                     // interrupt set to rising edge
+    P1IFG &= ~BIT1;                   // Clear interrupt flag
+    TA0CCTL0 = 0x0010;                  // Enables Capture/compare register for interrupt of timer A0
+    TA0CCR0 = 60000;                    // maximum value timer will count to
+    TA0CTL = TASSEL_2 + MC_0;           // SMCLK, timer stopped
+    __enable_interrupt();
+    __bis_SR_register(LPM0 + GIE);      // Low Power Mode w/ general interrupts enabled
+    }
+
+#pragma vector = PORT1_VECTOR       //when button is pressed
+__interrupt void Port_1(void)
+    {
+        P1OUT ^= BIT0;                      // Toggle LED
+        P1IE &= ~BIT1;                    // reset interrupt
+        TA0CTL = TASSEL_2 + MC_1;           // Timer_A Control Register - SMCLK high frequency clock, Up
+    }
+
+#pragma vector=TIMER0_A0_VECTOR
+__interrupt void Interrupt_2(void)
+{
+    TA0CTL = MC_0;                      // Stop timer
+    P1IE |= BIT1;                     // Interrupt enable set to BUTTON
+    P1IFG &= ~BIT1;                     // Clear interrupt flag
+    }
