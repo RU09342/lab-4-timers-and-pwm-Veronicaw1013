@@ -1,42 +1,40 @@
-#include <msp430f5529.h>
+#include <msp430.h>
 int main(void){
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+        P1DIR |= BIT2;  //Pin 1.2 is jumped to the LED header output
+         P1SEL |= BIT2;  //pin set to TA0.1
+         P2DIR &= ~BIT1;  //set P2.1 as input
+         P2REN |= BIT1;  //pin 2.1 resistor enable
+         P2OUT |= BIT1;  //pullup resistor
+         P2IE |= BIT1;   //pin 2.1 enable interrupt
+         P2IES |= BIT1;  //interrupt on falling edge
+         P2IFG &= ~BIT1;  //clear flag
 
-    /* GPIO INIT*/
-    P1SEL |= BIT0;         // sets port mux for timer output
-    P4SEL &= ~BIT7;             // sets port mux
-    P2SEL &= ~BIT1;             // sets port mux
-    P1OUT &= ~BIT0;
-    P1DIR |= BIT0;
-    P4DIR |= BIT7;    // Sets pin 1.0 and pin 1.1 as an output
-    P4OUT &= ~BIT7;    // Sets pull up to VCC
-    P2DIR &= ~BIT1;   // sets pin 5.6 as an input
-    P2REN |= BIT1;    // Enables pull up resistor on P5.6
-    P2OUT |= BIT1;    // Sets pull up to VCC
-    /* INTERRUPT INIT */
-    P2IE |= BIT1;
-    P2IES |= BIT1;
-    P2IFG &= ~BIT1;
-    TA0CTL |= (MC_1  + TASSEL_2 +TACLR);            //up timer, Aclk
-    TA0CCTL1 = (OUTMOD_7);
-    TA0CCR0= 500;                           // sets maximum timer value
-    TA0CCR1= 250;
-    _bis_SR_register(LPM0_bits + GIE);                  // Enter LPM0 w/ interrupt
+         P4DIR |= BIT7;    //pin 4.7 as an output
+         P4SEL &= ~(BIT7);  //sets I/O
+         P4OUT &= ~BIT7;    //pin 4.7 initially off
+
+         TA0CCR0  = 500-1;      //sets max value timer will count to
+         TA0CCTL1 = OUTMOD_7;    //timer in set/reset mode
+         TA0CCR1 = 250; // 50% duty cycle
+         TA0CTL = MC_1  + TASSEL_2 + ID_1; // up timer, SMCLK, div 2
+         __bis_SR_register(GIE);       // global interrupt enable
+         __no_operation(); // For debugger
 }
-#pragma vector=PORT2_VECTOR
+#pragma vector=PORT2_VECTOR // button interrupt
 __interrupt void Port_2(void){
-    P2IE &= ~BIT1;
-    _delay_cycles(50000);
-    P2IE |= BIT1;               //re-enable interrupt
-    P2IES ^= BIT1;
-    if (~P2IES & BIT1){           //if interrupt entered on posedge
-        P4OUT ^= BIT7;              // flip led
+    P2IE &= ~BIT1;  // disable interrupt
+    _delay_cycles(50000);   //delay
+    P2IE |= BIT1;               //reenable interrupt
+    P2IES ^= BIT1;  //interrupt changes to rising edge
+    if (~P2IES & BIT1){           // if button is pressed
+        P4OUT ^= BIT7;              // turn on second LED
         TA0CCR1 += 50;              // increase duty by 10%
-        if(TA0CCR1 == 550)
-            TA0CCR1 = 0;            // stay on if at 100%
+        if(TA0CCR1 == 550)  //if maximum value is exceeded
+            TA0CCR1 = 0;            // reset CCR1
     }
-    else if (P2IES & BIT1){      // executes on the negedge
-        P4OUT ^= BIT7;
+    else if (P2IES & BIT1){      // if button is released
+        P4OUT &= ~BIT7; // turn off second LED
     }
-    P2IFG &= ~BIT1;
+    P2IFG &= ~BIT1; //clear interrupt flag
 }

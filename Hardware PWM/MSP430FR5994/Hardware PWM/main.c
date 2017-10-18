@@ -1,40 +1,40 @@
 #include <msp430.h>
 int main(void){
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
-    PM5CTL0 &= ~LOCKLPM5;  // adjust power settings
-    /* GPIO INIT*/
+    PM5CTL0 &= ~LOCKLPM5;  //disable high impedance mode
+
     P1SEL0 |= BIT0;         // sets port mux for timer output
     P1SEL0 &= ~BIT1;             // sets port mux
     P5SEL0 &= ~BIT6;             // sets port mux
     P1DIR |= BIT0|BIT1;    // Sets pin 1.0 and pin 1.1 as an output
-    P1OUT &= ~BIT1;    // Sets pull up to VCC
+    P1OUT &= ~BIT1;    // pin 1.1 initially off
     P5DIR &= ~BIT6;   // sets pin 5.6 as an input
-    P5REN |= BIT6;    // Enables pull up resistor on P5.6
-    P5OUT |= BIT6;    // Sets pull up to VCC
-    /* INTERRUPT INIT */
-    P5IE |= BIT6;
-    P5IES |= BIT6;
-    P5IFG &= ~BIT6;
-    TA0CTL= (MC_1  + TASSEL_1);            //up timer, Aclk
-    TA0CCTL1 = (OUTMOD_7);
-    TA0CCR0= 500;                           // sets maximum timer value
-    TA0CCR1= 250;
-    _BIS_SR(CPUOFF + GIE);                  // Enter LPM0 w/ interrupt
+    P5REN |= BIT6;    //pin 5.6 resistor enable
+    P5OUT |= BIT6;    //pullup resistor
+
+    P5IE |= BIT6; //pin 5.6 enable interrupt
+    P5IES |= BIT6;//interrupt on falling edge
+    P5IFG &= ~BIT6;//clear flag
+    TA0CTL= MC_1  + TASSEL_2 + ID_1; //up timer, SMCLK, div 2
+    TA0CCTL1 = (OUTMOD_7);//timer in set/reset mode
+    TA0CCR0= 500;// sets maximum timer value
+    TA0CCR1= 250;// 50% duty cycle
+    _BIS_SR(CPUOFF + GIE);// Enter LPM0 w/ interrupt
 }
-#pragma vector=PORT5_VECTOR
+#pragma vector=PORT5_VECTOR// button interrupt
 __interrupt void Port_5(void){
-    P5IE &= ~BIT6;
-    _delay_cycles(50000);
+    P5IE &= ~BIT6;// disable interrupt
+    _delay_cycles(50000);//delay
     P5IE |= BIT6;               //re-enable interrupt
-    P5IES ^= BIT6;
-    if (~P5IES & BIT6){           //if interrupt entered on posedge
-        P1OUT ^= BIT1;              // flip led
-        TA0CCR1 += 50;              // increase duty by 10%
-        if(TA0CCR1 == 550)
-            TA0CCR1 = 0;            // stay on if at 100%
+    P5IES ^= BIT6;              //interrupt changes to rising edge
+    if (~P5IES & BIT6){           // if button is pressed
+        P1OUT ^= BIT1;              // turn on second LED
+        TA0CCR1 += 50;             // increase duty by 10%
+        if(TA0CCR1 == 550)          //if maximum value is exceeded
+            TA0CCR1 = 0;            // reset CCR1
     }
-    else if (P5IES & BIT6){      // executes on the negedge
-        P1OUT ^= BIT1;
+    else if (P5IES & BIT6){      // if button is released
+        P1OUT ^= BIT1;          // turn off second LED
     }
-    P5IFG &= ~BIT6;
+    P5IFG &= ~BIT6;             //clear interrupt flag
 }

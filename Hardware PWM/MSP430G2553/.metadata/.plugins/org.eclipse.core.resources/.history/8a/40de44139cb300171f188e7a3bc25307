@@ -1,0 +1,45 @@
+#include <msp430.h>
+
+#include <msp430g2553.h>
+
+int count = 0;
+
+int main(void){
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+
+    P1SEL |= BIT0;         // sets port mux for timer output
+    P1DIR |= BIT0;
+    P1DIR |= BIT6;    // Sets pin 1.0 and pin 9.7 as an output
+    P1OUT &= ~BIT6;    // Sets pull up to VCC
+    P1DIR &= ~BIT3;   // sets pin 1.1 as an input
+    P1REN |= BIT3;    // Enables pull up resistor on P1.1
+    P1OUT |= BIT3;    // Sets pull up to VCC
+    /* INTERRUPT INIT */
+    P1IE |= BIT3;
+    P1IES |= BIT3;
+    P1IFG &= ~BIT3;
+    TA0CTL= (MC_1  + TASSEL_2);            //up timer, Aclk
+    TA0CCTL1 = (OUTMOD_7);
+    TA0CCR0= 1000;                           // sets maximum timer value
+    TA0CCR1= 500;
+    _BIS_SR(LPM0_bits + GIE);                  // Enter LPM0 w/ interrupt
+}
+#pragma vector = PORT1_VECTOR
+__interrupt void PORT_1(void)
+{
+    count+=1;       //increment counter
+    switch(count)   //change duty cycle for each button press
+    {
+    case 1: TACCR1 = 600;break;
+    case 2: TACCR1 = 700;break;
+    case 3: TACCR1 = 800;break;
+    case 4: TACCR1 = 900;break;
+    case 5:
+        {
+            TACCR1 = 500;
+            count = 0;
+            break;
+        }
+    }
+    P1IFG &= ~BIT3; // Clear interrupt flag
+}

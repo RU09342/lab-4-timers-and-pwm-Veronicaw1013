@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v16.9.3                     
 ******************************************************************************
->> Linked Tue Oct 17 01:52:49 2017
+>> Linked Tue Oct 17 23:11:15 2017
 
 OUTPUT FILE NAME:   <Hardware PWM.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs_noexit"  address: 00004054

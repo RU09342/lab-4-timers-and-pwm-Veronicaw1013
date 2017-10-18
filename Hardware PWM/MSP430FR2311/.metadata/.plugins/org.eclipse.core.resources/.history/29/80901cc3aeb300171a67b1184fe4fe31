@@ -1,0 +1,40 @@
+#include <msp430.h>
+int main(void){
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+        P1DIR |= BIT6;  //Pin 1.2 is jumped to the LED header output
+         P1SEL |= BIT6;  //pin set to TA0.1
+         P1DIR &= ~BIT1;  //set P2.1 as input
+         P1REN |= BIT1;  //pin 2.1 resistor enable
+         P1OUT |= BIT1;  //pullup resistor
+         P1IE |= BIT1;   //pin 2.1 enable interrupt
+         P1IES |= BIT1;  //interrupt on falling edge
+         P1IFG &= ~BIT1;  //clear flag
+
+         P2DIR |= BIT0;    //pin 4.7 as an output
+         P2SEL &= ~(BIT0);  //sets I/O
+         P2OUT &= ~BIT0;    //pin 4.7 initially off
+
+         TB0CCR0  = 500-1;      //sets max value timer will count to
+         TA0CCTL1 = OUTMOD_7;    //timer in set/reset mode
+         TA0CCR1 = 250; // 50% duty cycle
+         TA0CTL = MC_1  + TASSEL_2 + ID_1; // up timer, SMCLK, div 2
+         __bis_SR_register(GIE);       // global interrupt enable
+         __no_operation(); // For debugger
+}
+#pragma vector=PORT1_VECTOR // button interrupt
+__interrupt void Port_1(void){
+    P1IE &= ~BIT1;  // disable interrupt
+    _delay_cycles(50000);   //delay
+    P1IE |= BIT1;               //reenable interrupt
+    P1IES ^= BIT1;  //interrupt changes to rising edge
+    if (~P1IES & BIT1){           // if button is pressed
+        P2OUT ^= BIT0;              // turn on second LED
+        TA0CCR1 += 50;              // increase duty by 10%
+        if(TA0CCR1 == 550)  //if maximum value is exceeded
+            TA0CCR1 = 0;            // reset CCR1
+    }
+    else if (P1IES & BIT1){      // if button is released
+        P2OUT &= ~BIT0; // turn off second LED
+    }
+    P1IFG &= ~BIT1; //clear interrupt flag
+}

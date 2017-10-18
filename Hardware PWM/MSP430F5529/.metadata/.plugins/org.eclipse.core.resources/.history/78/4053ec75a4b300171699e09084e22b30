@@ -1,0 +1,40 @@
+#include <msp430f5529.h>
+int main(void){
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+        P1DIR |= BIT2;  //Pin set as output with wire connecting to led header instead of P1.0
+         P1SEL |= BIT2;  //pin set to TA0.1
+         P1DIR &= BIT1;  //set P1.1 as input
+         P1REN |= BIT1;  //enables the pull up resistor at P1.1
+         P1OUT |= BIT1;  //set pull up resistor at P1.1
+         P1IE |= BIT1;   //enable interrupt
+         P1IES |= BIT1;  //toggle edge
+         P1IFG &= BIT1;  //clear flag
+
+         P4DIR |= BIT7;    // set pin 4.7 as an output
+         P4SEL &= ~(BIT7);       // sets port mux
+
+         //Set up CCRs for clock count and pwm control
+         TA0CCR0  = 500-1;      //After timerA counts to 255 reset
+         TA0CCTL1 = OUTMOD_7;    //Put Capture Control 1 in set and reset mode
+         TA0CCR1 = 250; //Initialize Capture Control Register 1 to be at 50% duty cycle
+         TA0CTL = (MC_1  + TASSEL_1);   //TimerA uses SMCLK, with divider of 8, in count up mode
+         __bis_SR_register(LMP0_bits + GIE);       // Enter LPM0, interrupts enabled
+         __no_operation(); // For debugger
+}
+#pragma vector=PORT1_VECTOR
+__interrupt void Port_1(void){
+    P2IE &= ~BIT1;
+    _delay_cycles(50000);
+    P1IE |= BIT1;               //re-enable interrupt
+    P1IES ^= BIT1;
+    if (~P1IES & BIT1){           //if interrupt entered on posedge
+        P4OUT ^= BIT7;              // flip led
+        TA0CCR1 += 50;              // increase duty by 10%
+        if(TA0CCR1 == 550)
+            TA0CCR1 = 0;            // stay on if at 100%
+    }
+    else if (P1IES & BIT1){      // executes on the negedge
+        P4OUT ^= BIT7;
+    }
+    P1IFG &= ~BIT1;
+}
