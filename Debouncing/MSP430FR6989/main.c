@@ -1,127 +1,48 @@
 #include <msp430.h>
 
-int state = 0;
+void button(void) {
+  P1DIR |= ~BIT1;   // Sets Pin 1.1 as an input
+  P1REN |=  BIT1;   // Pin 1.1 resistor enable
+  P1OUT |=  BIT1;   // pullup resistor
+  P1IE  |=  BIT1;   // pin 1.1 interrupt enable
+  P1IES |= ~BIT1;   // interrupt on falling edge
+  P1IFG &= ~BIT1;   // clear flag
+}
+
+void LED(void) {
+  P1DIR  |= BIT0;
+}
+
+void main(void) {
 
 
+    WDTCTL = WDTPW + WDTHOLD;  // stop watchdog timer
 
-void main(void)
+    button();
+    LED();
 
-{
+    TB0CCR0 = 10000;                  // Sets CCR0 value to avoid bouncing
+    TB0CTL = TBSSEL_1 + MC_0 + TBCLR; // SMCLK, Stopped, clear timer 
+    TB0CCTL0 = CCIE;                  // capture/compare interrupt enable
 
-    WDTCTL = WDTPW + WDTHOLD; // Stop watchdog timer
-
-
-
-    P1DIR |= BIT0;//set P1.0 as output
-
-    P9DIR |= BIT7;//set P1.6
-
-    P1DIR &= ~BIT1;//set P5.5 as input
-
-    P1REN |= BIT1;//enables the pull up resistor at P5.5
-
-    P1OUT |= BIT1;//set pull up resistor at P5.5
-
-    P1IE |= BIT1;//enable interrupt
-
-    P1IES |= BIT1;//toggle edge
-
-    P1IFG &= ~BIT1;//clear flag
-
-
-
-
-
-    TA0CCTL0 = CCIE;
-
-    TA0CCR0 = 30000;
-
-
-
-    __enable_interrupt();
-
-    __bis_SR_register(LPM0 + GIE); // LPM0 with interrupts enabled
-
+  _BIS_SR(LPM0_bits + GIE);   // Enables Low Power Mode 0 and Global Interrupt
 }
 
 
-
-#pragma vector= PORT1_VECTOR
-
-__interrupt void PORT_1(void)
-
-{
-
-    TA0CTL = TASSEL_2 + MC_1 + TACLR + ID_2;//start the timer
-
-    if(state == 0)
-
-    {
-
-        P1OUT ^= BIT0;
-
-        P1IFG &= BIT1;
-
-        P9OUT &= ~BIT7;
-
-    }
-
-    else
-
-    {
-
-        P1IFG &= ~BIT1;
-
-        P9OUT |= BIT7;
-
-    }
-
-    P1IE &= ~BIT3;//stop P1.3 from inputting
-
+#pragma vector=PORT1_VECTOR
+__interrupt void Port_1(void) {
+    P1OUT ^=  BIT0;      // toggle LED
+    P1IE  &= ~BIT1;   // Disables interrupt
+    P1IFG &= ~BIT1;   // clears flag
+    TB0CTL |= BIT4;       // Sets timer to up-mode
 }
 
+#pragma vector=TIMER0_B0_VECTOR
+__interrupt void Timer_B (void) {
 
 
-// Timer A0 interrupt service routine
-
-#pragma vector = TIMER0_A0_VECTOR
-
-__interrupt void Timer_A (void)
-
-{
-
-
-
-    if(state == 0)
-
-    {
-
-        P1IES &= ~BIT1;
-
-        state = 1;
-
-    }
-
-    else if(state == 1)
-
-    {
-
-        P1IFG &= ~BIT1;
-
-        P1IES |= BIT1;
-
-        state = 0;
-
-    }
-
-
-
-    P1IE |= BIT1;
-
-    TA0CTL &= ~TASSEL_2;
-
-    TA0CTL |= TACLR;
-
-
-
+    P1IE  |= BIT1;  // Enables the interrupt
+    TB0CTL &= ~BIT4;    // Stops
+    TB0CTL |= BIT2;     // Resets the clock
+    P1IFG &= ~BIT1; // Clears interrupt flag
 }
