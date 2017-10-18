@@ -27,7 +27,7 @@ int main(void){
 
 #pragma vector=TIMER0_B1_VECTOR
 __interrupt void Timer0_B1_ISR (void){
-    if(TB0CCR1==500){
+    if(TB0CCR1==500){ // if CCR1 reaches max value
     }
     else{
         P1OUT &= ~BIT0; // LED off
@@ -51,7 +51,7 @@ __interrupt void Port_1(void){
         P2OUT ^= BIT0;              // flip other led
         TB0CCR1 += 50;              // increase duty by 10%
         if(TB0CCR1 == 550)
-            TB0CCR1 = 0;            // stay on if at 100%
+            TB0CCR1 = 0;            
     }
     else if (P1IES & BIT1){      // executes on the negedge
         P2OUT &= ~BIT0;

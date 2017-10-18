@@ -1,4 +1,4 @@
-#include <msp430.h>
+ #include <msp430.h>
 
 int main(void){
 
@@ -26,7 +26,7 @@ int main(void){
 
 #pragma vector=TIMER0_A1_VECTOR
 __interrupt void Timer0_A1_ISR (void){
-    if(TA0CCR1==500){
+    if(TA0CCR1==500){ // if CCR1 reaches max value
     }
     else{
         P1OUT &= ~BIT0; // LED off
@@ -50,7 +50,7 @@ __interrupt void Port_1(void){
         P1OUT |= BIT6;              // flip other led
         TA0CCR1 += 50;              // increase duty by 10%
         if(TA0CCR1 == 550)
-            TA0CCR1 = 0;            // stay on if at 100%
+            TA0CCR1 = 0;            
     }
     else if (P1IES & BIT3){      // executes on the negedge
         P1OUT &= ~BIT6;

@@ -1,4 +1,4 @@
-#include <msp430.h>
+ #include <msp430.h>
 
 int main(void){
 
@@ -26,7 +26,11 @@ int main(void){
 
 #pragma vector=TIMER0_B1_VECTOR
 __interrupt void Timer0_B1_ISR (void){
+<<<<<<< HEAD
     if(TB0CCR1==500){	// if CCR1 reaches max value
+=======
+    if(TB0CCR1==500){ // if CCR1 reaches max value
+>>>>>>> 9310b65f6ab1bd7e40b083c243de8d7cb812d0bf
     }
     else{
         P1OUT &= ~BIT0; // LED off
