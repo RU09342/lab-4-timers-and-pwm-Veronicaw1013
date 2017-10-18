@@ -6,18 +6,18 @@ int main(void){
     PM5CTL0 &= ~LOCKLPM5;     //disable high impedance mode
     P9SEL0 &= ~(BIT7);       // sets port mux
     P1SEL0 &= ~(BIT0);       // sets port mux
-    P9DIR |= BIT7;    // set pin 9.7 as an output
-    P1DIR |= BIT0;    // set pin 1.0 as an output
+    P9DIR |= BIT7;    // pin 9.7 as an output
+    P1DIR |= BIT0;    // pin 1.0 as an output
     P9OUT &= ~BIT7;
 
-    P1DIR &= ~BIT1;   // set pin 1.1 as an input
-    P1REN |= BIT1;    // Enables pull up or pull down resistor on pin 1.1
-    P1OUT |= BIT1;    // Selects pullup resistor
+    P1DIR &= ~BIT1;   // pin 1.1 as an input
+    P1REN |= BIT1;    // pin 1.1 resistor enable
+    P1OUT |= BIT1;    // pullup resistor
 
-    P1IE |= BIT1;   // interrupt enable on pin 1.1
-    P1IES |= BIT1;  //set interrupt to falling edge
-    P1IFG &= ~BIT1; // clear interrupt flag
-    TB0CTL= MC_1  + TBSSEL_2 + ID_1; //up timer, SMCLK, div 2
+    P1IE |= BIT1;   // pin 1.1 enable interrupt
+    P1IES |= BIT1;  //interrupt on falling edge
+    P1IFG &= ~BIT1; //clear flag
+    TB0CTL= MC_1  + TBSSEL_2 + ID_1; // up timer, SMCLK, div 2
     TB0CCTL1 = (CCIE);  // capture/compare interrupt enable
     TB0CCTL0 = (CCIE);
     TB0CCR0= 500-1;        // max value timer will count up to
