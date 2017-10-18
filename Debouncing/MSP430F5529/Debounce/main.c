@@ -28,7 +28,7 @@ void main(void) {
     LED();
 
     TA0CCR0 = 10000;                  // Sets CCR0 value to avoid bouncing
-    TA0CTL = TASSEL_1 + MC_0 + TACLR; // SMCLK, continuous, Stopped
+    TA0CTL = TASSEL_1 + MC_0 + TACLR; // SMCLK, Stopped, clear timer 
     TA0CCTL0 = CCIE;                  // capture/compare interrupt enable
 
   _BIS_SR(LPM0_bits + GIE);   // Enables Low Power Mode 0 and Global Interrupt
